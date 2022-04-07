@@ -42,4 +42,3 @@ source ${__SOURCING_ROOT__}/tex/tex.sh
 source ${__SOURCING_ROOT__}/bash/bash.sh
 source ${__SOURCING_ROOT__}/git/git.sh
 source ${__SOURCING_ROOT__}/ino/ino.sh
-source ${__SOURCING_ROOT__}/rem/rem.sh

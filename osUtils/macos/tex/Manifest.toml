@@ -1,5 +1,6 @@
 # This file is machine-generated - editing it directly is not advised
 
+julia_version = "1.7.0"
 manifest_format = "2.0"
 
 [[deps.ArgParse]]
@@ -10,6 +11,11 @@ version = "1.1.4"
 
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+
+[[deps.BibTeX]]
+git-tree-sha1 = "e16505bdc7c0177d0a1709022d4ac41d51c5181d"
+uuid = "7b0aa2c9-049f-5cec-894a-2b6b781bb25e"
+version = "0.1.0"
 
 [[deps.Dates]]
 deps = ["Printf"]
@@ -35,10 +41,10 @@ deps = ["Dates"]
 uuid = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 
 [[deps.TexAssistant]]
-deps = ["ArgParse", "TOML"]
-git-tree-sha1 = "1f6ba89c678ef0a1e10d388a1828dd5f0cb21797"
+deps = ["ArgParse", "BibTeX", "TOML"]
+git-tree-sha1 = "76a15f622fba17430a8e12d96123292684365837"
 uuid = "600230a9-b20f-4ec3-b56e-c0a439718caf"
-version = "0.1.0"
+version = "0.1.2"
 
 [[deps.TextWrap]]
 git-tree-sha1 = "9250ef9b01b66667380cf3275b3f7488d0e25faf"
