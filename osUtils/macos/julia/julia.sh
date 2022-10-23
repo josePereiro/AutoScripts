@@ -1,6 +1,7 @@
 ## ------------------------------------------------------------
 # env variables
 export JULIA_NUM_THREADS=4
+export JULIA_EDITOR="code"
 
 ## ------------------------------------------------------------
 # utils
@@ -25,7 +26,7 @@ alias jl_import_pkgs="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -
 alias jl_precompile_projects="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_precompile_projects(ARGS)' --"
 alias jl_update_manifests="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_update_manifests(ARGS)' --"
 alias jl_upgrade_manifests="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_upgrade_manifests(ARGS)' --"
-alias jl_include_block="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_copy_include_block(ARGS)' --"
+alias jl_redo_include_block="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_redo_include_block(ARGS)' --"
 alias jl_check_imports="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_check_imports(ARGS)' --"
 
 # PkgMassInstaller

@@ -2,7 +2,7 @@
 
 julia_version = "1.8.2"
 manifest_format = "2.0"
-project_hash = "5aa2d2598449e1c870ea9366dfbbe32933875ed8"
+project_hash = "9cc48a25d8bafd890432dcd7f982cdef3da3a7e3"
 
 [[deps.ArgParse]]
 deps = ["Logging", "TextWrap"]
@@ -10,28 +10,23 @@ git-tree-sha1 = "3102bce13da501c9104df33549f511cd25264d7d"
 uuid = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
 version = "1.1.4"
 
-[[deps.Base64]]
-uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
-
-[[deps.BibTeX]]
-git-tree-sha1 = "e16505bdc7c0177d0a1709022d4ac41d51c5181d"
-uuid = "7b0aa2c9-049f-5cec-894a-2b6b781bb25e"
-version = "0.1.0"
-
 [[deps.Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 
-[[deps.InteractiveUtils]]
-deps = ["Markdown"]
-uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+[[deps.FilesTreeTools]]
+git-tree-sha1 = "4f5748f5b2c8e41858be46a6c835988f7cc038eb"
+uuid = "638332cd-b357-4bf5-bfa2-3531168477f5"
+version = "0.6.0"
 
 [[deps.Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
-[[deps.Markdown]]
-deps = ["Base64"]
-uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
+[[deps.ObsidianAssistant]]
+deps = ["ArgParse", "FilesTreeTools", "TOML"]
+git-tree-sha1 = "db93beeac7d6a6a034238d1560df9977902f4ad5"
+uuid = "ef2754c0-c555-4d81-bf39-f3e359f0c7f3"
+version = "0.1.4"
 
 [[deps.Printf]]
 deps = ["Unicode"]
@@ -41,12 +36,6 @@ uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 deps = ["Dates"]
 uuid = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 version = "1.0.0"
-
-[[deps.TexAssistant]]
-deps = ["ArgParse", "BibTeX", "TOML"]
-git-tree-sha1 = "76a15f622fba17430a8e12d96123292684365837"
-uuid = "600230a9-b20f-4ec3-b56e-c0a439718caf"
-version = "0.1.2"
 
 [[deps.TextWrap]]
 git-tree-sha1 = "9250ef9b01b66667380cf3275b3f7488d0e25faf"
