@@ -10,6 +10,7 @@ export JULIA_EDITOR="code"
 alias jl_edit_startup="code -r /Users/Pereiro/.julia/config/startup.jl"
 
 alias lijulia='julia --startup-file=no -O2'
+alias juliap='julia --project'
 
 # go .julia/dev
 alias jl_cd_dev="cd /Users/Pereiro/.julia/dev"
