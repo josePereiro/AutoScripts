@@ -2,6 +2,7 @@
 # env variables
 export JULIA_NUM_THREADS=4
 export JULIA_EDITOR="code"
+# export JULIA_COPY_STACKS=1
 
 ## ------------------------------------------------------------
 # utils
@@ -28,6 +29,7 @@ alias jl_update_manifests="julia --startup-file=no --project=${__JULIA_UTILS_DIR
 alias jl_upgrade_manifests="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_upgrade_manifests(ARGS)' --"
 alias jl_redo_include_block="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_redo_include_block(ARGS)' --"
 alias jl_check_imports="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_check_imports(ARGS)' --"
+alias jl_script="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_jl_script(ARGS)' --"
 
 # PkgMassInstaller
 alias jl_mass_installer="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import PkgMassInstaller; PkgMassInstaller.install_projs_args()' --"
@@ -38,4 +40,8 @@ alias jl_code_pkg="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} ${__
 alias jl_test_internet="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} ${__JULIA_UTILS_DIR__}/jl_test_internet.jl"
 alias jl_add_pkg="julia --startup-file=no --project ${__JULIA_UTILS_DIR__}/jl_add_pkg.jl"
 
+# Pkg stuff
 alias jl_test_pkg='julia --startup-file=no --project -e "import Pkg; Pkg.test()" 2>&1'
+alias jl_resolve_pkg='julia --startup-file=no --project -e "import Pkg; Pkg.resolve()" 2>&1'
+alias jl_build_pkg='julia --startup-file=no --project -e "import Pkg; Pkg.build()" 2>&1'
+alias jl_precompile_pkg='julia --startup-file=no --project -e "import Pkg; Pkg.precompile()" 2>&1'

@@ -2,7 +2,14 @@ __SYS_DIR__="${__SOURCING_ROOT__}/sys"
 
 ## ------------------------------------------------------------
 # open settings
-alias sys_edit_AutoScripts="code ${OSUTILS_DIR}"
+sys_edit_AutoScripts() {
+    # Try workspace first
+    if [ -f ${OSUTILS_CODE_WORKSPACE} ]; then
+        ${_OSUTILS_EDITOR} "${OSUTILS_CODE_WORKSPACE}"
+    else
+        ${_OSUTILS_EDITOR} "${OSUTILS_DIR}"
+    fi
+}
 
 # source settings 
 alias sys_source_config="source ${__CURR_UTILS_DIR}/__init__.sh"
