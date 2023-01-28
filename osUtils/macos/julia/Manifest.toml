@@ -12,9 +12,9 @@ version = "1.2.1"
 
 [[deps.Adapt]]
 deps = ["LinearAlgebra"]
-git-tree-sha1 = "195c5505521008abea5aee4f96930717958eac6f"
+git-tree-sha1 = "0310e08cb19f5da31d08341c6120c047598f5b9c"
 uuid = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
-version = "3.4.0"
+version = "3.5.0"
 
 [[deps.ArgParse]]
 deps = ["Logging", "TextWrap"]
@@ -91,9 +91,9 @@ version = "1.15.7"
 
 [[deps.ChangesOfVariables]]
 deps = ["ChainRulesCore", "LinearAlgebra", "Test"]
-git-tree-sha1 = "38f7a08f19d8810338d4f5085211c7dfa5d5bdd8"
+git-tree-sha1 = "844b061c104c408b24537482469400af6075aae4"
 uuid = "9e997f8a-9a97-42d5-a9f1-ce6bfc15e2c0"
-version = "0.1.4"
+version = "0.1.5"
 
 [[deps.Clustering]]
 deps = ["Distances", "LinearAlgebra", "NearestNeighbors", "Printf", "Random", "SparseArrays", "Statistics", "StatsBase"]
@@ -103,9 +103,9 @@ version = "0.14.3"
 
 [[deps.CodecZlib]]
 deps = ["TranscodingStreams", "Zlib_jll"]
-git-tree-sha1 = "ded953804d019afa9a3f98981d99b33e3db7b6da"
+git-tree-sha1 = "9c209fb7536406834aa938fb149964b985de6c83"
 uuid = "944b1d66-785c-5afd-91f1-9de20f533193"
-version = "0.7.0"
+version = "0.7.1"
 
 [[deps.ColorSchemes]]
 deps = ["ColorTypes", "ColorVectorSpace", "Colors", "FixedPointNumbers", "Random", "SnoopPrecompile"]
@@ -336,15 +336,15 @@ version = "3.3.8+0"
 
 [[deps.GR]]
 deps = ["Artifacts", "Base64", "DelimitedFiles", "Downloads", "GR_jll", "HTTP", "JSON", "Libdl", "LinearAlgebra", "Pkg", "Preferences", "Printf", "Random", "Serialization", "Sockets", "TOML", "Tar", "Test", "UUIDs", "p7zip_jll"]
-git-tree-sha1 = "387d2b8b3ca57b791633f0993b31d8cb43ea3292"
+git-tree-sha1 = "9e23bd6bb3eb4300cb567bdf63e2c14e5d2ffdbc"
 uuid = "28b8d3ca-fb5f-59d9-8090-bfdbd6d07a71"
-version = "0.71.3"
+version = "0.71.5"
 
 [[deps.GR_jll]]
 deps = ["Artifacts", "Bzip2_jll", "Cairo_jll", "FFMPEG_jll", "Fontconfig_jll", "GLFW_jll", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "Pixman_jll", "Pkg", "Qt5Base_jll", "Zlib_jll", "libpng_jll"]
-git-tree-sha1 = "5982b5e20f97bff955e9a2343a14da96a746cd8c"
+git-tree-sha1 = "aa23c9f9b7c0ba6baeabe966ea1c7d2c7487ef90"
 uuid = "d2c73de3-f751-5644-a686-071e5b155ba9"
-version = "0.71.3+0"
+version = "0.71.5+0"
 
 [[deps.Gettext_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "Libiconv_jll", "Pkg", "XML2_jll"]
@@ -389,9 +389,9 @@ version = "1.0.2"
 
 [[deps.HTTP]]
 deps = ["Base64", "CodecZlib", "Dates", "IniFile", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
-git-tree-sha1 = "eb5aa5e3b500e191763d35198f859e4b40fff4a6"
+git-tree-sha1 = "37e4657cd56b11abe3d10cd4a1ec5fbdb4180263"
 uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-version = "1.7.3"
+version = "1.7.4"
 
 [[deps.HarfBuzz_jll]]
 deps = ["Artifacts", "Cairo_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "Graphite2_jll", "JLLWrappers", "Libdl", "Libffi_jll", "Pkg"]
@@ -579,15 +579,15 @@ version = "1.0.0"
 
 [[deps.JLAssistant]]
 deps = ["ArgParse", "FilesTreeTools", "InteractiveUtils", "LibGit2", "LocalRegistry", "Pkg", "PkgTemplates", "RegexTools", "TOML"]
-git-tree-sha1 = "cd9f8a6c36a1236fd23f5e0062ea0e0d1e99face"
+git-tree-sha1 = "40139090d3d8e5c0a3894482ef69ae2ea910902f"
 uuid = "b110ed5b-1827-4ea4-a31c-50efd441af06"
-version = "0.3.11"
+version = "0.3.13"
 
 [[deps.JLD2]]
 deps = ["FileIO", "MacroTools", "Mmap", "OrderedCollections", "Pkg", "Printf", "Reexport", "TranscodingStreams", "UUIDs"]
-git-tree-sha1 = "ec8a9c9f0ecb1c687e34c1fda2699de4d054672a"
+git-tree-sha1 = "c3244ef42b7d4508c638339df1bdbf4353e144db"
 uuid = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
-version = "0.4.29"
+version = "0.4.30"
 
 [[deps.JLFzf]]
 deps = ["Pipe", "REPL", "Random", "fzf_jll"]
@@ -986,9 +986,9 @@ version = "0.4.1"
 
 [[deps.PkgTemplates]]
 deps = ["Dates", "InteractiveUtils", "LibGit2", "Mocking", "Mustache", "Parameters", "Pkg", "REPL", "UUIDs"]
-git-tree-sha1 = "a9bb1aaef87802cd64669f8c665dced70a0810bc"
+git-tree-sha1 = "cb9adebf65c910acc75ef537d25791371d8339c6"
 uuid = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
-version = "0.7.29"
+version = "0.7.30"
 
 [[deps.PkgVersion]]
 deps = ["Pkg"]
@@ -1184,9 +1184,9 @@ version = "0.9.4"
 
 [[deps.SimpleWeightedGraphs]]
 deps = ["Graphs", "LinearAlgebra", "Markdown", "SparseArrays", "Test"]
-git-tree-sha1 = "a6f404cc44d3d3b28c793ec0eb59af709d827e4e"
+git-tree-sha1 = "a8d28ad975506694d59ac2f351e29243065c5c52"
 uuid = "47aef6b3-ad0c-573a-a1e2-d07658019622"
-version = "1.2.1"
+version = "1.2.2"
 
 [[deps.Sixel]]
 deps = ["Dates", "FileIO", "ImageCore", "IndirectArrays", "OffsetArrays", "REPL", "libsixel_jll"]
