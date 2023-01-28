@@ -1,6 +1,7 @@
 ## ------------------------------------------------------------
 # Globals
 export OSUTILS_DIR="${HOME}/AutoScripts/osUtils"
+export OSUTILS_CODE_WORKSPACE="${OSUTILS_DIR}/osUtils.code-workspace"
 export __MACOS_UTILS_DIR="${HOME}/AutoScripts/osUtils/macos"
 
 ## ------------------------------------------------------------
