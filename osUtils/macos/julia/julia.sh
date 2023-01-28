@@ -31,6 +31,8 @@ alias jl_upgrade_manifests="julia --startup-file=no --project=${__JULIA_UTILS_DI
 alias jl_redo_include_block="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_redo_include_block(ARGS)' --"
 alias jl_check_imports="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_check_imports(ARGS)' --"
 alias jl_script="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_jl_script(ARGS)' --"
+alias jl_open_workspace="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant.run_open_devpath_workspace(ARGS)' --"
+alias jl_show_workspaces="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import JLAssistant; JLAssistant._show_dev_workspaces()' --"
 
 # PkgMassInstaller
 alias jl_mass_installer="julia --startup-file=no --project=${__JULIA_UTILS_DIR__} -e 'import PkgMassInstaller; PkgMassInstaller.install_projs_args()' --"
