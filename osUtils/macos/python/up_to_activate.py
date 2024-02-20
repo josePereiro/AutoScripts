@@ -4,37 +4,55 @@ import argparse
 import os
 from utils import *
 
-def check_for_venv(file, name0, trigger_files):
-    if os.path.basename(file) not in trigger_files: return False
-    if not name0: return True
-    return name0 == os.path.basename(os.path.dirname(file))
+def check_for_venv(root, name0, trigger_files):
+    if name0 and name0 != os.path.basename(root): return False
+    for trigger in trigger_files:
+        file = os.path.join(root, trigger)
+        if os.path.isfile(file): return True
+    return False
+    
 
-def up_activate(root0, name0, trigger_files, to_activate_file, slevel):
+def up_activate(
+        root0, name0, trigger_files, 
+        to_activate_file, slevel, verbose, 
+        dry_run
+    ):
     root0 = os.path.expanduser(root0)
     root0 = os.path.abspath(root0)
     if not os.path.isdir(root0): return False
+    if verbose: print("---------------------")
+    if verbose: print("root0", root0)
 
+    _len_root0 = root0.count(os.path.sep)
     for root, dirs, files in os.walk(root0):
         root = os.path.abspath(root)
-        for file in files:
-            file = os.path.join(root, file)
-            # print(root)
-            if not check_for_venv(file, name0, trigger_files): continue
-            activate_file = os.path.join(root, "bin", "activate")
-            print(f"venv found: {root}")
-            print(f"activate_file: {activate_file}")
-            # up to_activate
+        
+        # check level
+        _len_root = root.count(os.path.sep)
+        if (_len_root - _len_root0) >= slevel: continue
+
+        if verbose: print("root", root)
+
+        # check for venv
+        if not check_for_venv(root, name0, trigger_files): continue
+        activate_file = os.path.join(root, "bin", "activate")
+        
+        # up to_activate
+        if not dry_run: 
             open(to_activate_file, "w").write(
                 f"source '{activate_file}'"
             )
-            return True
-        slevel -= 1
-        if slevel <= 0: return False
+
+        print(f"venv found: {root}")
+        print(f"activate_file: {activate_file}")
+        
+        return True
     return False
 
 # %% - - - - - - - - - - - - - - - - - - - - - - - - - - 
 def main():
     # CLI
+    # TODO: add verbose
     parser = argparse.ArgumentParser(description="Read a pdf and creates a txt file!")
     parser.add_argument(
         '--name', "-n",
@@ -45,20 +63,34 @@ def main():
         '--level', "-l",
         default = 3,
         help='search depth level', 
+        type = int
     )
-    # args = parser.parse_args()
-    args, _ = parser.parse_known_args()
+    parser.add_argument(
+        '--verbose', '-v', 
+        action='store_true', 
+        help='Enable verbose mode'
+    )
+    parser.add_argument(
+        '--dry', '-d', 
+        action='store_false', 
+        help='Enable verbose mode'
+    )
+    args = parser.parse_args()
 
     # extract args
     name = args.name
     slevel = args.level
+    verbose = args.verbose
+    dry_run = args.verbose
+
     print(f"cli_name: {name}")
     print(f"cli_slevel: {slevel}")
+    print(f"cli_verbose: {verbose}")
+    print(f"dry_run: {dry_run}")
 
     # To sync with bash caller
-    to_activate_file = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), "_OSUTILS_PYTHON_TO_ACTIVATE_"
-    )
+    to_activate_file = os.environ.get("_OSUTILS_TO_ACTIVATE_FILE", None)
+    if not to_activate_file: return 0
 
     # resolve roots
     roots = []
@@ -74,7 +106,7 @@ def main():
     for root0 in roots:
         flag = up_activate(
             root0, name, trigger_files, to_activate_file, 
-            slevel
+            slevel, verbose, dry_run
         )
         if flag: return 0
 
