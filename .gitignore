@@ -2,6 +2,7 @@
 /dev
 *dev
 .vscode
+*_OSUTILS_*
 
 # Created by https://www.toptal.com/developers/gitignore/api/julia,macos,python,zsh
 # Edit at https://www.toptal.com/developers/gitignore?templates=julia,macos,python,zsh
