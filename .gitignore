@@ -1,5 +1,6 @@
 
 /dev
+*dev
 .vscode
 
 # Created by https://www.toptal.com/developers/gitignore/api/julia,macos,python,zsh
@@ -168,6 +169,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.venv/bin
 env/
 venv/
 ENV/

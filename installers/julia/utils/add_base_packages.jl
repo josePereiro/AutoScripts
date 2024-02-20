@@ -41,23 +41,30 @@ let
             "ThreadsX", 
             
             # Julia workflow
-            "IJulia", "Pluto", "PlutoUI", "Revise", "PkgTemplates", "LanguageServer", 
-            "OhMyREPL", "DaemonMode",
+            "IJulia", 
+            # "Pluto", "PlutoUI", 
+            "Revise", "PkgTemplates", "LanguageServer", 
+            "OhMyREPL", 
+            # "DaemonMode",
 
             # Images
             "Images", "ImageIO", "QuartzImageIO", "ImageMagick",
 
             # Plots
-            "Plots", "PyPlot", "StatsPlots", "GR",
+            "Plots", "PyPlot", "StatsPlots", "GR", "Makie", "Makie", "CairoMakie",
 
             # IO
             "FileIO", "BSON", "JSON", "SBML", "HDF5", "TOML",
 
             # Optimization
-            "JuMP", "GLPK", "Clp", "Cbc", "Tulip", "OSQP", "Ipopt", "MadNLP.jl", "NLopt",
+            "JuMP", "GLPK", "Clp", "Cbc", "Tulip", "OSQP", "Ipopt", "MadNLP", "NLopt",
 
             # COBRA
-            "COBREXA", "Escher"
+            "COBREXA", "Escher", 
+
+            # Calculus
+            "Symbolics", "SymPy", "ForwardDiff", 
+            
 
         ]
         try
@@ -82,24 +89,29 @@ let
 
             "JLAssistant", "TexAssistant", "ProjAssistant",
             "SimTools", "ImgTools",
-            "ExternalCmds", "RegexTools", "PkgMassInstaller", "PkgInstaller",
+            "ExternalCmds", "RegexTools", 
+            # "PkgMassInstaller", "PkgInstaller",
             "GitWorkers", "GitLinks", 
             "SimpleLockFiles", "FilesTreeTools",
             "DataFileNames", 
-            "MetLP", "MetNets", "MetEP",
+            "Oba", "ObaBase", 
+            
+            # MetX
+            "MetXBase", "MetXOptim", "MetXGEMs", "MetXEP", "MetXPlots", "MetXMC", "MetXGrids",  "MetX", 
         ]
 
         pkgdir = joinpath(Pkg.devdir(), pkg)
 
         try
             
+            # TODO: Add
             # clone if missing
-            if !isdir(pkgdir)
-                url = "https://github.com/josePereiro/$(pkg).jl"
-                @info("Clonning", pkg, url)
-                mkpath(pkgdir)
-                run(`git clone $(url) $(pkgdir)`)
-            end
+            # if !isdir(pkgdir)
+            #     url = "https://github.com/josePereiro/$(pkg).jl"
+            #     @info("Clonning", pkg, url)
+            #     mkpath(pkgdir)
+            #     run(`git clone $(url) $(pkgdir)`)
+            # end
 
             @info("Developing $(pkg)")
             Pkg.develop(;path=pkgdir)

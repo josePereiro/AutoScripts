@@ -1,8 +1,8 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.5"
+julia_version = "1.9.0"
 manifest_format = "2.0"
-project_hash = "9cc48a25d8bafd890432dcd7f982cdef3da3a7e3"
+project_hash = "9db5dc4455ba3453cbfa0b0fb39164f44fd06a12"
 
 [[deps.ArgParse]]
 deps = ["Logging", "TextWrap"]
@@ -35,7 +35,7 @@ uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 [[deps.TOML]]
 deps = ["Dates"]
 uuid = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
-version = "1.0.0"
+version = "1.0.3"
 
 [[deps.TextWrap]]
 git-tree-sha1 = "9250ef9b01b66667380cf3275b3f7488d0e25faf"
