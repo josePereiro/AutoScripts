@@ -4,14 +4,27 @@ import argparse
 import os
 from utils import *
 
+# %% - - - - - - - - - - - - - - - - - - - - - - - - - - 
 def check_for_venv(root, name0, trigger_files):
     if name0 and name0 != os.path.basename(root): return False
     for trigger in trigger_files:
         file = os.path.join(root, trigger)
         if os.path.isfile(file): return True
     return False
-    
 
+# %% - - - - - - - - - - - - - - - - - - - - - - - - - - 
+def traverse_directory(fun, root_dir, max_depth, current_depth=0):
+    if current_depth > max_depth: return False
+
+    for item in os.listdir(root_dir): 
+        item_path = os.path.join(root_dir, item)
+        if os.path.isdir(item_path):
+            flag = fun(item_path)
+            if flag == True: return True
+            flag = traverse_directory(fun, item_path, max_depth, current_depth + 1)
+            if flag == True: return True
+
+# %% - - - - - - - - - - - - - - - - - - - - - - - - - - 
 def up_activate(
         root0, name0, trigger_files, 
         to_activate_file, slevel, verbose, 
@@ -23,18 +36,11 @@ def up_activate(
     if verbose: print("---------------------")
     if verbose: print("root0", root0)
 
-    _len_root0 = root0.count(os.path.sep)
-    for root, dirs, files in os.walk(root0):
-        root = os.path.abspath(root)
-        
-        # check level
-        _len_root = root.count(os.path.sep)
-        if (_len_root - _len_root0) >= slevel: continue
-
+    # %% -. -- .. - .- . --- - .. -
+    def _fun(root):
         if verbose: print("root", root)
 
-        # check for venv
-        if not check_for_venv(root, name0, trigger_files): continue
+        if not check_for_venv(root, name0, trigger_files): return False
         activate_file = os.path.join(root, "bin", "activate")
         
         # up to_activate
@@ -47,6 +53,11 @@ def up_activate(
         print(f"activate_file: {activate_file}")
         
         return True
+    
+    # check root0
+    if _fun(root0): return True
+    # check the rest
+    if traverse_directory(_fun, root0, slevel): return True
     return False
 
 # %% - - - - - - - - - - - - - - - - - - - - - - - - - - 

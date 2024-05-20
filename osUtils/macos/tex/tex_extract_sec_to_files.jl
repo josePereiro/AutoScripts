@@ -1,4 +1,3 @@
-# TODO: add Project to handle `TexAssistant` version
 import TexAssistant
 let
     isempty(ARGS) && push!(ARGS, "-vcbo") # push defaults
