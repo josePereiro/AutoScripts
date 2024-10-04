@@ -1,8 +1,8 @@
 [deps]
+ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
 FilesTreeTools = "638332cd-b357-4bf5-bfa2-3531168477f5"
 JLAssistant = "b110ed5b-1827-4ea4-a31c-50efd441af06"
 LocalRegistry = "89398ba2-070a-4b16-a995-9893c55d93cf"
 MyPkgTemplate = "c1c1e88c-cb6c-463d-9723-3dce2b3356d0"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 PkgMassInstaller = "25937451-55af-4cf1-a681-2354f35bf0f3"
-ProjAssistant = "df388e3e-013c-4f8d-ba67-f4afa1ff006b"

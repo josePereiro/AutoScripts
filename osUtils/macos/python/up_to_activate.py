@@ -83,7 +83,7 @@ def main():
     )
     parser.add_argument(
         '--dry', '-d', 
-        action='store_false', 
+        action='store_true', 
         help='Enable verbose mode'
     )
     args = parser.parse_args()
@@ -92,7 +92,7 @@ def main():
     name = args.name
     slevel = args.level
     verbose = args.verbose
-    dry_run = args.verbose
+    dry_run = args.dry
 
     print(f"cli_name: {name}")
     print(f"cli_slevel: {slevel}")
@@ -100,13 +100,13 @@ def main():
     print(f"dry_run: {dry_run}")
 
     # To sync with bash caller
-    to_activate_file = os.environ.get("_OSUTILS_TO_ACTIVATE_FILE", None)
+    to_activate_file = os.environ.get("_OSUTILS_TO_ACTIVATE_TEMP_SCRIPT", None)
     if not to_activate_file: return 0
 
     # resolve roots
     roots = []
     roots.append(os.getcwd())
-    envs_paths = os.environ.get("OSUTILS_VENV_PATH", None)
+    envs_paths = os.environ.get("OSUTILS_PYTHON_VENV_PATH", None)
     if envs_paths:
         envs_paths = envs_paths.split(";") 
         roots.extend(envs_paths)

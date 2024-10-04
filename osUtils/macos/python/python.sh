@@ -1,23 +1,41 @@
+# TODO: Document this
+
 __PYTHON_UTILS_DIR__="${__SOURCING_ROOT__}/python"
 
-alias __OS_UTILS_PYTHON__="${__PYTHON_UTILS_DIR__}/.venv/bin/python"
-alias __OS_UTILS_PYTHON_SOURCE_ACTIVATE__="source ${__PYTHON_UTILS_DIR__}/.venv/bin/activate"
+# ENV VARIABLES
+export OSUTILS_PYTHON_VENV_DEPOT="${HOME}/.python/venvs"
 
+# Local OsUtils own python virtual enviroment, to install all required for oUtil puython tools to work...
+export __OS_UTILS_PYTHON_CMD__="${__PYTHON_UTILS_DIR__}/.venv/bin/python"
+
+# Activate an enviroment
 py_activate() {
-    export _OSUTILS_TO_ACTIVATE_FILE=$(mktemp -t py_activate)
+    export _OSUTILS_TO_ACTIVATE_TEMP_SCRIPT=$(mktemp -t py_activate)
     local _script="${__PYTHON_UTILS_DIR__}/up_to_activate.py"
-    __OS_UTILS_PYTHON__ "${_script}" "$@" # Update __OSUTILS_PYTHON_TO_ACTIVATE__ file
-    if [ -e "${_OSUTILS_TO_ACTIVATE_FILE}" ]; then
-        source "${_OSUTILS_TO_ACTIVATE_FILE}"
+    "${__OS_UTILS_PYTHON_CMD__}" "${_script}" "$@" # # Update bash temp script
+    if [ -e "${_OSUTILS_TO_ACTIVATE_TEMP_SCRIPT}" ]; then
+        source "${_OSUTILS_TO_ACTIVATE_TEMP_SCRIPT}"
     fi
-    rm -f "${_OSUTILS_TO_ACTIVATE_FILE}"
+    rm -f "${_OSUTILS_TO_ACTIVATE_TEMP_SCRIPT}"
 }
 
 py_exe() {
-    python -c "import sys; print(sys.executable)"
+    python -c "import sys; print(sys.executable); print(sys.version)"
 }
 
 py_pdf2text() {
     local _script="${__PYTHON_UTILS_DIR__}/pdf2text.py"
-    __OS_UTILS_PYTHON__ "${_script}" "$@"
+    "${__OS_UTILS_PYTHON_CMD__}" "${_script}" "$@"
 }
+
+py_new_venv() {
+    export _OSUTILS_TEMP_NEW_VENV_SCRIPT=$(mktemp -t py_new_venv)
+    local _script="${__PYTHON_UTILS_DIR__}/create_venv.py"
+    "${__OS_UTILS_PYTHON_CMD__}" "${_script}" "$@" # Update bash temp script
+    if [ -e "${_OSUTILS_TEMP_NEW_VENV_SCRIPT}" ]; then
+        source "${_OSUTILS_TEMP_NEW_VENV_SCRIPT}"
+    fi
+    rm -f "${_OSUTILS_TEMP_NEW_VENV_SCRIPT}"
+}
+
+

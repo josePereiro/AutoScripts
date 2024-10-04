@@ -1,6 +1,6 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.9.0"
+julia_version = "1.10.0"
 manifest_format = "2.0"
 project_hash = "5aa2d2598449e1c870ea9366dfbbe32933875ed8"
 
@@ -44,7 +44,7 @@ version = "1.0.3"
 
 [[deps.TexAssistant]]
 deps = ["ArgParse", "BibTeX", "TOML"]
-git-tree-sha1 = "76a15f622fba17430a8e12d96123292684365837"
+path = "/Users/Pereiro/.julia/dev/TexAssistant"
 uuid = "600230a9-b20f-4ec3-b56e-c0a439718caf"
 version = "0.1.2"
 
