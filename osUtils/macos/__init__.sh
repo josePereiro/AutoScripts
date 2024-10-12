@@ -42,3 +42,4 @@ source ${__SOURCING_ROOT__}/ino/ino.sh
 source ${__SOURCING_ROOT__}/sys/sys.sh
 source ${__SOURCING_ROOT__}/oba/oba.sh
 source ${__SOURCING_ROOT__}/js/js.sh
+source ${__SOURCING_ROOT__}/configfiles/configfiles.sh
