@@ -15,18 +15,8 @@ export __CURR_UTILS_DIR="${__MACOS_UTILS_DIR}"
 # Welcome when interactive
 echo "osUtils at '${OSUTILS_DIR}'."
 echo "Use 'sys_edit_AutoScripts' for managing."
+echo "entry file ${__ENTRY_POINT}"
 echo
-
-## ------------------------------------------------------------
-# source config files
-_OSUTILS_SOURCE_CONFIG_LOCK_="LOCKED"
-
-source "${HOME}/.bashrc"
-source "${HOME}/.bash_profile"
-source "${HOME}/.zshrc"
-source "${HOME}/.profile"
-
-_OSUTILS_SOURCE_CONFIG_LOCK_="UNLOCKED"
 
 ## ------------------------------------------------------------
 # source osUtils
@@ -43,3 +33,11 @@ source ${__SOURCING_ROOT__}/sys/sys.sh
 source ${__SOURCING_ROOT__}/oba/oba.sh
 source ${__SOURCING_ROOT__}/js/js.sh
 source ${__SOURCING_ROOT__}/configfiles/configfiles.sh
+
+## ------------------------------------------------------------
+# source config files
+
+source "${HOME}/.bashrc"
+source "${HOME}/.bash_profile"
+source "${HOME}/.zshrc"
+source "${HOME}/.profile"

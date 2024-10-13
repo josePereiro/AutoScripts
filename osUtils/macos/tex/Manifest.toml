@@ -1,17 +1,18 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.0"
+julia_version = "1.11.0"
 manifest_format = "2.0"
 project_hash = "5aa2d2598449e1c870ea9366dfbbe32933875ed8"
 
 [[deps.ArgParse]]
 deps = ["Logging", "TextWrap"]
-git-tree-sha1 = "3102bce13da501c9104df33549f511cd25264d7d"
+git-tree-sha1 = "22cf435ac22956a7b45b0168abbc871176e7eecc"
 uuid = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
-version = "1.1.4"
+version = "1.2.0"
 
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+version = "1.11.0"
 
 [[deps.BibTeX]]
 git-tree-sha1 = "e16505bdc7c0177d0a1709022d4ac41d51c5181d"
@@ -21,21 +22,26 @@ version = "0.1.0"
 [[deps.Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
+version = "1.11.0"
 
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+version = "1.11.0"
 
 [[deps.Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
+version = "1.11.0"
 
 [[deps.Markdown]]
 deps = ["Base64"]
 uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
+version = "1.11.0"
 
 [[deps.Printf]]
 deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+version = "1.11.0"
 
 [[deps.TOML]]
 deps = ["Dates"]
@@ -46,12 +52,13 @@ version = "1.0.3"
 deps = ["ArgParse", "BibTeX", "TOML"]
 path = "/Users/Pereiro/.julia/dev/TexAssistant"
 uuid = "600230a9-b20f-4ec3-b56e-c0a439718caf"
-version = "0.1.2"
+version = "0.1.3"
 
 [[deps.TextWrap]]
-git-tree-sha1 = "9250ef9b01b66667380cf3275b3f7488d0e25faf"
+git-tree-sha1 = "43044b737fa70bc12f6105061d3da38f881a3e3c"
 uuid = "b718987f-49a8-5099-9789-dcd902bef87d"
-version = "1.0.1"
+version = "1.0.2"
 
 [[deps.Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
+version = "1.11.0"

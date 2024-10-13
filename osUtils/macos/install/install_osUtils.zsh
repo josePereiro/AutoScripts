@@ -14,18 +14,17 @@ beginswith() { case $2 in "$1"*) true;; *) false;; esac; }
 _create_config_file () {
 
     local file="$1"
-    local sep="
+    local sep0="# >>> osUtils entry >>>"
+    local sep1="# --------------------------------------------------------------"
 
-# --------------------------------------------------------------
-    "
-
-    local osUtils_redirect_str="\
-# --------------------------------------------------------------
+        local osUtils_redirect_src="\
 # Redirect to osUtils if not yet done
-if [ \"\${_OSUTILS_SOURCE_CONFIG_LOCK_}\" != \"LOCKED\" ] && [ -f ${INIT_PATH} ]; then
-    source ${INIT_PATH}
-    return 0
-fi"
+if [ -z \"\${__ENTRY_POINT+x}\" ]; then 
+    # __ENTRY_POINT is unset
+    export __ENTRY_POINT=\"${file}\"
+    source \"${INIT_PATH}\"
+fi\
+"
 
     # backup
     local filebk="${file}bk"
@@ -43,12 +42,22 @@ fi"
     # overwrite config file
     if [ -f ${file} ]; then
         local content=`cat ${file}`
-        # check file content start with osUtils_redirect_str
-        if ! beginswith "${osUtils_redirect_str}" "${content}"; then
-            echo "${osUtils_redirect_str}${sep}${content}"  > "${file}"
+        # check file content start with osUtils_redirect_src
+        if ! beginswith "${sep0}" "${content}"; then
+            echo "${sep0}" > "${file}" # clear file
+            echo "${osUtils_redirect_src}" >> "${file}"
+            echo "" >> "${file}"
+            echo "${sep1}" >> "${file}"
+            echo "" >> "${file}"
+            echo "${content}" >> "${file}"
         fi
     else
-        echo "${osUtils_redirect_str}${sep}" > "${file}"
+        echo "${sep0}" > "${file}" # clear file
+        echo "${sep0}" >> "${file}"
+        echo "${osUtils_redirect_src}" >> "${file}"
+        echo "" >> "${file}"
+        echo "${sep1}" >> "${file}"
+        echo "" >> "${file}"
     fi
 }
 

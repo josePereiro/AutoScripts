@@ -1,8 +1,11 @@
-# --------------------------------------------------------------
+# >>> osUtils entry >>>
 # Redirect to osUtils if not yet done
-if [ "${_OSUTILS_SOURCE_CONFIG_LOCK_}" != "LOCKED" ] && [ -f /Users/Pereiro/AutoScripts/osUtils/macos/__init__.sh ]; then
-    source /Users/Pereiro/AutoScripts/osUtils/macos/__init__.sh
-    return 0
+if [ -z "${__ENTRY_POINT+x}" ]; then 
+    # __ENTRY_POINT is unset
+    export __ENTRY_POINT="/Users/Pereiro/.zshrc"
+    source "/Users/Pereiro/AutoScripts/osUtils/macos/__init__.sh"
 fi
 
 # --------------------------------------------------------------
+
+
