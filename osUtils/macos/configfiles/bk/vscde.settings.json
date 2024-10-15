@@ -31,7 +31,7 @@
 
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
     // proxy
-    "http.proxy": "http://10.6.100.72:3128",
+    // "http.proxy": "http://10.6.100.72:3128",
     // "http.proxy": "http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/",
     // "http.proxy": "http://proxy-trab.uh.cu:3128/",
     // "http.proxy": "http://10.6.230.13:58132/",
@@ -42,6 +42,9 @@
     // julia
     // "julia.enableCrashReporter": false,
     // "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "julia.executablePath": "/Users/Pereiro/.juliaup/bin/julia",
+    "julia.symbolCacheDownload": true,
 
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
     // python
@@ -66,98 +69,16 @@
     "todo-tree.general.tags": [
         "BUG", "TODO", "ToRead", "IDEAS", "XXX", "TODEL", "DEV", "ToDel", "[ ]", "[x]"
     ],
-    "julia.symbolCacheDownload": true,
     "explorer.confirmDragAndDrop": false,
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "julia.enableTelemetry": false,
     "git.confirmSync": false,
     "cmake.showOptionsMovedNotification": false,
-    "julia.enableCrashReporter": true,
-    "security.workspace.trust.untrustedFiles": "open",
     
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.osx": "zsh",
 }
 
 
-
-// {
-//     "terminal.integrated.commandsToSkipShell": [
-//         "language-julia.interrupt",
-//         "matlab.interrupt"
-//     ],
-//     "terminal.integrated.fontSize": 15,
-//     "terminal.integrated.enableMultiLinePasteWarning": false,
-
-//     "editor.renderWhitespace": "boundary",
-//     "editor.minimap.enabled": false,
-//     "editor.fontSize": 14,
-    
-//     "workbench.settings.editor": "json",
-//     "workbench.settings.useSplitJSON": true,
-
-//     "julia.execution.resultType": "both",
-//     "julia.NumThreads": "auto",
-//     "julia.persistentSession.shellExecutionArgument": "-c",
-//     "julia.plots.path": "./_plots",
-//     "julia.symbolCacheDownload": true,
-//     "julia.enableTelemetry": true,
-
-//     "explorer.confirmDragAndDrop": false,
-//     "explorer.confirmDelete": false,
-//     "git.confirmSync": false,
-//     "redhat.telemetry.enabled": false,
-//     "[julia]": {
-//         "editor.defaultFormatter": "julialang.language-julia"
-//     },
-//     "julia.enableCrashReporter": false,
-//     "security.workspace.trust.untrustedFiles": "open",
-//     "latex-workshop.view.pdf.color.dark.backgroundColor": "#ffffff",
-//     "latex-workshop.view.pdf.viewer": "browser",
-//     "latex-workshop.view.pdf.invert": 0.9, 
-//     // List of tags. *Note, if one tag starts with another tag, the longer tag 
-//     // should be specified first to prevent the shorter tag being matched.*
-//     "todo-tree.general.tags": [
-//         "BUG",
-//         "TODO",
-//         "ToRead",
-//         "IDEAS",
-//         "XXX",
-//         "TODEL",
-//         "DEV",
-//         "ToDel",
-//         "[ ]",
-//         "[x]"
-//     ],
-//     "todo-tree.general.tagGroups": {"TODEL": ["TODEL", "DEV", "ToDel"]},
-//     "files.autoSave": "afterDelay",
-//     "latex-workshop.latex.autoBuild.run": "never",
-//     "window.commandCenter": false,
-//     "git.openRepositoryInParentFolders": "never",
-//     "diffEditor.ignoreTrimWhitespace": false,
-//     "cmake.configureOnOpen": false,
-//     "window.zoomLevel": 1,
-//     "cmake.showOptionsMovedNotification": false,
-//     // "http.proxy": "http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/",
-//     // "http.proxy": "http://proxy-trab.uh.cu:3128/",
-//     // "http.proxy": "http://10.6.230.13:58132/",
-//     // "http.proxy": "http://10.6.230.13:58132/",
-
-//     // Python
-//     "python.venvFolders": [".python/venvs"],
-//     "jupyter.interactiveWindow.cellMarker.decorateCells": "None",
-//     // "jupyter.interactiveWindow.codeLens.commands": "None",
-//     "jupyter.interactiveWindow.codeLens.enable": false,
-//     "jupyter.interactiveWindow.splitRunFileIntoCells": false,
-//     "MATLAB.matlabConnectionTiming": "never",
-//     "jupyter.askForKernelRestart": false,
-
-//     "stlViewer.showAxes": true,
-//     "stlViewer.meshMaterialType": "lambert",
-
-//     // latex
-//     "latex-workshop.latex.outDir": "%DIR%/.aux",
-
-//     "markdown.preview.fontSize": 15,
-// }

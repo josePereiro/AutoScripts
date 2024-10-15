@@ -21,7 +21,7 @@ _create_config_file () {
 # Redirect to osUtils if not yet done
 if [ -z \"\${__ENTRY_POINT+x}\" ]; then 
     # __ENTRY_POINT is unset
-    export __ENTRY_POINT=\"${file}\"
+    __ENTRY_POINT=\"${file}\"
     source \"${INIT_PATH}\"
 fi\
 "

@@ -2,7 +2,7 @@
 # Redirect to osUtils if not yet done
 if [ -z "${__ENTRY_POINT+x}" ]; then 
     # __ENTRY_POINT is unset
-    export __ENTRY_POINT="/Users/Pereiro/.bashrc"
+    __ENTRY_POINT="/Users/Pereiro/.bashrc"
     source "/Users/Pereiro/AutoScripts/osUtils/macos/__init__.sh"
 fi
 
