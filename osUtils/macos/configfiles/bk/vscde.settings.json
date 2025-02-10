@@ -28,6 +28,13 @@
     // "editor.inlineSuggest.suppressSuggestions": true,
     "editor.quickSuggestionsDelay": 10000000,
     "editor.minimap.showSlider": "always",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true
+    },
+    "zenMode.hideLineNumbers": false,
 
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
     // proxy

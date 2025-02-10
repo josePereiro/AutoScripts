@@ -1,8 +1,6 @@
 ## ------------------------------------------------------------
 # env variables
-export JULIA_NUM_THREADS=4
-export JULIA_EDITOR="code"
-# export JULIA_COPY_STACKS=1
+# see .bashrc
 
 ## ------------------------------------------------------------
 # utils

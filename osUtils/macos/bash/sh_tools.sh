@@ -23,3 +23,22 @@ sh_open_sys_config() {
     _sh_open_in_editor "${HOME}/.zshrc"
     _sh_open_in_editor "${HOME}/.profile"
 }
+
+## ------------------------------------------------------------
+# create virtual link for config file
+# For use inside vscode
+
+_link_config() {
+    if [[ ! -f "${__BASH_UTILS_DIR__}/config/$1" ]]
+    then
+        if [[ -f "${HOME}/$1" ]] 
+        then
+            mkdir -p "${__BASH_UTILS_DIR__}/config"
+            ln -s "${HOME}/$1" "${__BASH_UTILS_DIR__}/config/$1"
+        fi
+    fi
+}
+_link_config ".bashrc"
+_link_config ".bash_profile"
+_link_config ".zshrc"
+_link_config ".profile"

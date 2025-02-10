@@ -1,0 +1,59 @@
+# This is Git's per-user configuration file.
+[user]
+	name = josePereiro
+	email = jose.pereiro.personal@gmail.com
+[core]
+	autocrlf = input
+	editor = code --wait
+	excludesfile=~/.gitignore
+	legacyheaders=false
+	quotepath=false
+	filemode = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[alias]
+	co = checkout
+	log = log -1 HEAD
+	last = log -1 HEAD
+	visual = !open .
+	tagbydate = for-each-ref --format=\"%(taggerdate): %(refname)\" --sort=-taggerdate --count=10 refs/tags
+	root = rev-parse --show-toplevel
+	st = status
+	find=log --pretty="format:%Cgreen%H %Cblue%s" --name-status --grep
+	s=status
+	a=!git add . && git status
+	au=!git add -u . && git status
+	aa=!git add . && git add -u . && git status
+	c=commit
+	cm=commit -m
+	ca=commit --amend
+	ac=!git add . && git commit
+	acm=!git add . && git commit -m
+	l=log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll=log --stat --abbrev-commit
+	lg=log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	llg=log --color --graph --pretty=format:'%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an <%ae>%Creset %C(bold green)%cr (%ci)' --abbrev-commit
+	d=diff
+	main=checkout main
+	spull=svn rebase
+	spush=svn dcommit
+[mergetool]
+	keepbackup=true
+[color]
+	ui=auto
+	interactive=auto
+[repack]
+	usedeltabaseoffset=true
+[credential]
+	helper=osxkeychain
+[init]
+	defaultBranch = main
+[github]
+	user = josePereiro
+# [http]
+# 	proxy = http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/
+# [https]
+# 	proxy = http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/

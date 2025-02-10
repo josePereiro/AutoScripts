@@ -1,0 +1,1 @@
+/Users/Pereiro/.bashrc /Users/Pereiro/AutoScripts/osUtils/macos/bash/config/.bashrc

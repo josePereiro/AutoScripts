@@ -1,0 +1,35 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.terminal.clear",
+    },
+    {
+        "key": "cmd+l",
+        "command": "-dendron.lookupNote",
+        "when": "dendron:pluginActive"
+    },
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+l cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
+    },
+    {
+        "key": "cmd+k",
+        "command": "-workbench.action.terminal.clear",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "editor.action.insertSnippet"
+    }
+]

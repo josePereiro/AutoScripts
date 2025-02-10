@@ -1,0 +1,1 @@
+/Users/Pereiro/.bash_profile /Users/Pereiro/AutoScripts/osUtils/macos/bash/config/.bash_profile

@@ -1,0 +1,105 @@
+{
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: vscode
+    "workbench.settings.editor"x: "json",
+    "workbench.settings.useSplitJSON": true,
+    "terminal.integrated.fontSize": 15,
+    "editor.minimap.enabled": true,
+    "editor.fontSize": 18,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 90,
+    // "window.autoDetectColorScheme": false,
+    // "workbench.colorTheme": "Visual Studio Light",
+    // "workbench.colorTheme": "Visual Studio Light",
+    // "window.systemColorTheme" : "light",
+
+    // "window.commandCenter": false,
+    "workbench.editorAssociations": {
+        "*.md": "default",
+        "*.csv": "default",
+        "*.pdf": "latex-workshop-pdf-hook",
+        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt",
+        "matlab.interrupt"
+    ],
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "editor.suggest.selectionMode": "never",
+    "editor.suggest.preview": false,
+    "editor.suggestOnTriggerCharacters": false,
+    // "editor.inlineSuggest.enabled": false,
+    // "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.quickSuggestionsDelay": 10000000,
+    "editor.minimap.showSlider": "always",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true
+    },
+    "zenMode.hideLineNumbers": false,
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: proxy
+    // "http.proxy": "http://10.6.100.72:3128",
+    // "http.proxy": "http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/",
+    // "http.proxy": "http://proxy-trab.uh.cu:3128/",
+    // "http.proxy": "http://10.6.230.13:58132/",
+    // "http.proxy": "http://10.6.230.13:58132/",
+
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: julia
+    // "julia.enableCrashReporter": false,
+    // "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "julia.executablePath": "/Users/Pereiro/.juliaup/bin/julia",
+    "julia.symbolCacheDownload": true,
+    "julia.plots.path": "./_plots",
+    "julia.additionalArgs": [
+        "--startup-file=yes",
+    ],
+    "julia.NumThreads": "auto",
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: python
+    "python.venvFolders": [".python/venvs"],
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: git
+    "git.openRepositoryInParentFolders": "never",
+    
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: latex
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#ffffff",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.invert": 0.9, 
+    "latex-workshop.latex.outDir": "%DIR%/.aux",
+    "latex-workshop.latex.autoBuild.run": "never",
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: Other plugins
+    // List of tags. *Note, if one tag starts with another tag, the longer 
+    // tag should be specified first to prevent the shorter tag being matched.*
+    "todo-tree.general.tags": [
+        "BUG", "TODO", "ToRead", "IDEAS", "XXX", "TODEL", "DEV", "ToDel", "[ ]", "[x]", "MARK"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "git.confirmSync": false,
+    "cmake.showOptionsMovedNotification": false,
+    
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "github.copilot.advanced": {
+        "authProvider": "github"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+}
+
+

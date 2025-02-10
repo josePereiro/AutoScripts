@@ -2,6 +2,17 @@
 using Revise
 
 ## --------------------------------------------------------
+# CONFIG REGISTRY UPDATES
+try
+    import Pkg
+    autoupdate_flag = get(ENV, "JULIA_AUTO_UPDATE_REGISTRY", "1") == "1"
+    # dis 
+    Pkg.UPDATED_REGISTRY_THIS_SESSION[] = !autoupdate_flag
+catch ignore; 
+    @error ignore
+end
+
+## --------------------------------------------------------
 _isdir(p::String) = isdir(p)
 _isdir(p) = false
 

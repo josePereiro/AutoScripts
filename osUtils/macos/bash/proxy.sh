@@ -22,3 +22,16 @@ sh_set_proxy () {
 # clear
 unset http_proxy
 unset https_proxy
+
+# TODO: move to linux 
+_APT_CONFIG_FILE='/etc/apt/apt.conf.d/proxy.conf'
+sh_set_proxy_apt () {
+    local PROXY=${PROXY_POOL[$1]}
+    sudo echo "Acquire::http::Proxy \"${PROXY}\"" > _APT_CONFIG_FILE
+    sudo echo "Acquire::https::Proxy \"${PROXY}\"" >> 
+    sudo cat _APT_CONFIG_FILE
+}
+
+sh_unset_proxy_apt () {
+    sudo echo "" > _APT_CONFIG_FILE
+}
