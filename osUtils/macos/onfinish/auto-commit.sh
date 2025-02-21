@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Set HERE as working directory
+cd "$(dirname "$0")"
+
 # Check if we're in a Git repository
 if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     echo "Error: Not a Git repository"
