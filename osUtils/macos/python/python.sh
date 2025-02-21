@@ -28,6 +28,16 @@ py_pdf2text() {
     "${__OS_UTILS_PYTHON_CMD__}" "${_script}" "$@"
 }
 
+py_youtube() {
+    local _script="${__PYTHON_UTILS_DIR__}/youtube.py"
+    "${__OS_UTILS_PYTHON_CMD__}" "${_script}" "$@"
+}
+
+py_youtube() {
+    local _script="${__PYTHON_UTILS_DIR__}/youtube.py"
+    "${__OS_UTILS_PYTHON_CMD__}" "${_script}" "$@"
+}
+
 py_new_venv() {
     export _OSUTILS_TEMP_NEW_VENV_SCRIPT=$(mktemp -t py_new_venv)
     local _script="${__PYTHON_UTILS_DIR__}/create_venv.py"

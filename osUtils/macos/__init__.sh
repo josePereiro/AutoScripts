@@ -32,7 +32,7 @@ source ${__SOURCING_ROOT__}/ino/ino.sh
 source ${__SOURCING_ROOT__}/sys/sys.sh
 source ${__SOURCING_ROOT__}/oba/oba.sh
 source ${__SOURCING_ROOT__}/js/js.sh
-source ${__SOURCING_ROOT__}/configfiles/configfiles.sh
+source ${__SOURCING_ROOT__}/configfiles/configfiles.sh 
 
 ## ------------------------------------------------------------
 # source config files
@@ -41,3 +41,7 @@ source "${HOME}/.bashrc"
 source "${HOME}/.bash_profile"
 source "${HOME}/.zshrc"
 source "${HOME}/.profile"
+
+## ------------------------------------------------------------
+# onfinish hook
+source ${__SOURCING_ROOT__}/onfinish/onfinish.sh 

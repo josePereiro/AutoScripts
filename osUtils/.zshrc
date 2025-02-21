@@ -1,1 +1,0 @@
-/Users/Pereiro/.zshrc /Users/Pereiro/AutoScripts/osUtils/macos/bash/config/.zshrc
