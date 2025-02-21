@@ -14,7 +14,7 @@ fi
 git status
 
 # Add all changes
-git add .
+git add -A
 
 # Check if there are changes to commit
 if git diff --cached --quiet; then
