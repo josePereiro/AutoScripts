@@ -105,6 +105,7 @@
     "gutterpreview.imagePreviewMaxHeight": "300",
     "editor.accessibilitySupport": "off",
     "MATLAB.showFeatureNotAvailableError": false,
+    "julia.enableCrashReporter": false,
 }
 
 
