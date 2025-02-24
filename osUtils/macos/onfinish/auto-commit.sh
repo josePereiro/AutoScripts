@@ -11,7 +11,7 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
 fi
 
 # status all changes
-git status
+# git status
 
 # Add all changes
 git add -A
