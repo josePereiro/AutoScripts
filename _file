@@ -1,0 +1,3 @@
+#! bash
+echo 'No enviroment activated... see py_activate'
+exit 0%
