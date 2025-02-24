@@ -8,3 +8,8 @@ __ONFINISHED_UTILS_DIR__="${__SOURCING_ROOT__}/onfinish"
 # run git auto commit
 bash "${__ONFINISHED_UTILS_DIR__}/auto-commit.sh" > /dev/null 2>&1
 # bash "${__ONFINISHED_UTILS_DIR__}/auto-commit.sh"
+
+
+## ------------------------------------------------------------
+# Prepend a few paths
+source ${__BASH_UTILS_DIR__}/path.sh
