@@ -48,18 +48,18 @@ py_new_venv() {
     rm -f "${_OSUTILS_TEMP_NEW_VENV_SCRIPT}"
 }
 
-# Desable global enviroment implicit call
+# Disable global enviroment implicit call
+_shadow_disable() {
+    local FILE="$1"  # Local variable for the file name
 
+    # Check if the file exists
+    if [ ! -f "$FILE" ]; then
+        echo "#! bash\necho 'No enviroment activated... see py_activate'\nexit 0%" > FILE
+        chmod -x FILE
+    fi
+}
 mkdir -p "${HOME}/.local/bin"
-_file="${HOME}/.local/bin/pip"
-echo "#! bash\necho 'No enviroment activated... see py_activate'\nexit 0%" > _file
-chmod 777 _file
-_file="${HOME}/.local/bin/pip3"
-echo "#! bash\necho 'No enviroment activated... see py_activate'\nexit 0%" > _file
-chmod 777 _file
-_file="${HOME}/.local/bin/python"
-echo "#! bash\necho 'No enviroment activated... see py_activate'\nexit 0%" > _file
-chmod 777 _file
-_file="${HOME}/.local/bin/python3"
-echo "#! bash\necho 'No enviroment activated... see py_activate'\nexit 0%" > _file
-chmod 777 _file
+_shadow_disable "${HOME}/.local/bin/pip"
+_shadow_disable "${HOME}/.local/bin/python"
+_shadow_disable "${HOME}/.local/bin/pip3"
+_shadow_disable "${HOME}/.local/bin/python3"
