@@ -26,33 +26,58 @@ links_file = args.links_file
 if not os.path.exists(download_dir):
   os.makedirs(download_dir)
 
-def download_video(link):
-  try:
-    # configure yt-dlp
-    outtmpl = os.path.join(download_dir, '%(title)s.%(ext)s')
-    ydl_opts = {
-        'format': 'best',  # best quality
-        'outtmpl': outtmpl, # file name
-    }
-    # Descargar el video
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-      print(f"Downloading: {link}...")
-      ydl.download([link])
-      print(f"DONE: {link}")
-  except Exception as e:
-    print(f"ERROR {link}: {e}")
-
 
 # read links_file urls
 try:
+  print(">>>>>>>>>>>>>>>>>>>>>>")
+  print("Link file: ", links_file)
+  print()
+
   with open(links_file, "r") as file:
     video_links = [line.strip() for line in file if line.strip()]
+  
+  nlinks = len(video_links)
 
-  # download
-  for link in video_links:
-    download_video(link)
+  # configure yt-dlp
+  outtmpl = os.path.join(download_dir, '%(title)s.%(ext)s')
+  ydl_opts = {
+      'format': 'best',  # best quality
+      'outtmpl': outtmpl, # file name
+  }
 
-  print("ALL DONE!!!")
+  # iter urls
+  errors = []
+  for (linki, link) in enumerate(video_links):
+    print('--------------------------')
+    print('Downloading')
+    print(f"[{linki+1}/{nlinks}] {link}...")
+    
+    # download video
+    try:
+      # Descargar el video
+      with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([link])
+        print()
+        print(f"DONE: {link}")
+    except Exception as e:
+      print()
+      print(f"ERROR {link}: {e}")
+      errors.append([linki, link, e])
+
+  # show errors
+  print()
+  print("!!!!!!!!!!!!!!!!!!!!!!")
+  if len(errors) > 0:
+    print("ERRORS")
+    for err in errors:
+      print(f"  [{err[0]+1}] {err[1]} -> {err[2]}")
+  else:
+    print("NO ERRORS")
+
+  print()
+  print("<<<<<<<<<<<<<<<<<<<<<<")
+  print("END...")
+
 except FileNotFoundError:
   print(
       f"links_file missing, links_file: '{links_file}'")
