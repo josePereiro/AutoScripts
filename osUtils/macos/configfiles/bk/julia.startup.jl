@@ -20,14 +20,14 @@ _LOCATE_KEEPOUT = [".git"]
 _LOCATE_THFREC = 0.4
 
 import FilesTreeTools
-function _locate(f::Function, root0; ext = ".jl")
+function _locate(f::Function, root0; ext = ".jl", filter_ext = true)
     root0 = abspath(expanduser(root0))
     lk = ReentrantLock()
     thfrec = _LOCATE_THFREC
     keepout = _LOCATE_KEEPOUT
     FilesTreeTools.walkdown(root0; thfrec) do _path
         isfile(_path) || return :continue
-        endswith(_path, ext) || return :continue
+        filter_ext && endswith(_path, ext) || return :continue
         # println(path) # path to files
         for (li, line) in enumerate(eachline(_path))
             f(line) || continue
