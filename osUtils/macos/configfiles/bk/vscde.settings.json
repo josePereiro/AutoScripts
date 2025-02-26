@@ -43,7 +43,7 @@
 
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
     // MARK: proxy
-    "http.proxy": "http://10.6.100.72:3128",
+    // "http.proxy": "http://10.6.100.72:3128",
     // "http.proxy": "http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/",
     // "http.proxy": "http://proxy-trab.uh.cu:3128/",
     // "http.proxy": "http://10.6.230.13:58132/",
