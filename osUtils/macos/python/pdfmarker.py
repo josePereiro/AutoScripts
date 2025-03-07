@@ -10,19 +10,23 @@ def execute(inputfile, output_dir):
     Replace 'your_bash_command' with the actual command you want to run.
     """
     
-    # command = ['taskset', '-c', '0-10', 'marker_single', '--output_dir', output_dir, '--languages', '"es"', '--', inputfile]
-    command = ['echo', inputfile]
+    command = ['taskset', '-c', '0-10', 'marker_single', '--output_dir', output_dir, '--languages', '"en"', '--', inputfile]
+    # command = ['echo', inputfile]
     
     try:
         # Run the command
         subprocess.run(command, check=True)
-        print(f"Processed {inputfile} and saved to {outputfile}")
+        print(f"Processed {inputfile} and saved to {output_dir}")
     except subprocess.CalledProcessError as e:
         print(f"Error processing {inputfile}: {e}")
 
 def process_files():
     # Get the current directory
     current_directory = os.getcwd()
+    current_basename = os.path.basename(current_directory)
+
+    home_dir = os.path.expanduser("~")
+    output_dir = os.path.join(home_dir, "marker", current_basename)
 
     # Iterate over all files in the current directory
     for filename in os.listdir(current_directory):
@@ -30,19 +34,23 @@ def process_files():
         inputfile = os.path.join(current_directory, filename)
 
         # Skip directories, only process files
-        if os.path.isfile(inputfile):
+        if not inputfile.endswith('.pdf'):
+            continue
 
-            output_dir = "/home/pereiro/marker"
-            os.makedirs(output_dir, exist_ok=True)
-            basename = os.path.basename(inputfile)
-            outputfile = os.path.join(output_dir, basename)
+        # Skip directories, only process files
+        if not os.path.isfile(inputfile):
+            continue
 
-            # Check if the output file already exists
-            if not os.path.exists(outputfile):
-                print(f"Processing {inputfile}...")
-                execute(inputfile, output_dir)
-            else:
-                print(f"Skipping {inputfile} because {outputfile} already exists.")
+        os.makedirs(output_dir, exist_ok=True)
+        basename = os.path.basename(inputfile)
+        outputfile = os.path.join(output_dir, basename)
+
+        # Check if the output file already exists
+        if not os.path.exists(outputfile):
+            print(f"Processing {inputfile}...")
+            execute(inputfile, output_dir)
+        else:
+            print(f"Skipping {inputfile} because {outputfile} already exists.")
 
 if __name__ == "__main__":
     process_files()
