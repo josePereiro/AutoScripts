@@ -10,8 +10,8 @@ def execute(inputfile, output_dir):
     Replace 'your_bash_command' with the actual command you want to run.
     """
     
-    command = ['taskset', '-c', '0-10', 'marker_single', '--output_dir', output_dir, '--languages', '"en"', '--', inputfile]
-    # command = ['echo', inputfile]
+    # command = ['taskset', '-c', '0-10', 'marker_single', '--output_dir', output_dir, '--languages', '"en"', '--', inputfile]
+    command = ['echo', inputfile]
     
     try:
         # Run the command
@@ -27,30 +27,40 @@ def process_files():
 
     home_dir = os.path.expanduser("~")
     output_dir = os.path.join(home_dir, "marker", current_basename)
+    os.makedirs(output_dir, exist_ok=True)
+
+    extension = ".pdf"
 
     # Iterate over all files in the current directory
     for filename in os.listdir(current_directory):
+
+        print('----------------------')
+
         # Construct the full path of the input file
         inputfile = os.path.join(current_directory, filename)
 
         # Skip directories, only process files
-        if not inputfile.endswith('.pdf'):
+        if not inputfile.endswith(extension):
+            print(f"Skipping {inputfile}, invalid extension.")
             continue
 
         # Skip directories, only process files
         if not os.path.isfile(inputfile):
+            print(f"Skipping {inputfile} because file is missing.")
             continue
 
-        os.makedirs(output_dir, exist_ok=True)
-        basename = os.path.basename(inputfile)
-        outputfile = os.path.join(output_dir, basename)
+        inputfile_basename = os.path.basename(inputfile)
+        output_file = os.path.join(output_dir, inputfile_basename)
+        output_file = output_file.replace(extension, '')
+        
+        if os.path.exists(output_file):
+            print(f"Skipping {inputfile} because {output_file} already exists.")
+            continue
 
-        # Check if the output file already exists
-        if not os.path.exists(outputfile):
-            print(f"Processing {inputfile}...")
-            execute(inputfile, output_dir)
-        else:
-            print(f"Skipping {inputfile} because {outputfile} already exists.")
+        # execute
+        print(f"Processing {inputfile}...")
+        execute(inputfile, output_dir)
+            
 
 if __name__ == "__main__":
     process_files()
