@@ -191,5 +191,15 @@
         "key": "shift+cmd+]",
         "command": "-workbench.action.debug.nextConsole",
         "when": "inDebugRepl"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "editor.action.nextSelectionMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+f3",
+        "command": "-editor.action.nextSelectionMatchFindAction",
+        "when": "editorFocus"
     }
 ]
