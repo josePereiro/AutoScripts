@@ -106,6 +106,7 @@
     "editor.accessibilitySupport": "off",
     "MATLAB.showFeatureNotAvailableError": false,
     "julia.enableCrashReporter": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
 }
 
 
