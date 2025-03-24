@@ -201,5 +201,25 @@
         "key": "cmd+f3",
         "command": "-editor.action.nextSelectionMatchFindAction",
         "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+.",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "f4",
+        "command": "-search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "alt+cmd+,",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
     }
 ]

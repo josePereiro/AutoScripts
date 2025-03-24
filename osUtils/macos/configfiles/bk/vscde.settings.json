@@ -107,6 +107,7 @@
     "MATLAB.showFeatureNotAvailableError": false,
     "julia.enableCrashReporter": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
 }
 
 
