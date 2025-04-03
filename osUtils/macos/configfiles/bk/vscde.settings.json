@@ -78,6 +78,22 @@
     "latex-workshop.view.pdf.invert": 0.9, 
     "latex-workshop.latex.outDir": "%DIR%/.aux",
     "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.tools": [
+        {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-f",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+        ],
+        "env": {}
+        },
+    ],
 
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
     // MARK: Other plugins
