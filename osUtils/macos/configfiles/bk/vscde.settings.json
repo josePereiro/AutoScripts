@@ -100,7 +100,7 @@
     // List of tags. *Note, if one tag starts with another tag, the longer 
     // tag should be specified first to prevent the shorter tag being matched.*
     "todo-tree.general.tags": [
-        "BUG", "TODO", "ToRead", "IDEAS", "XXX", "TODEL", "DEV", "ToDel", "[ ]", "[x]"
+        "ISSUE", "BUG", "TODO", "ToRead", "IDEAS", "XXX", "TODEL", "DEV", "ToDel", "[ ]", "[x]"
     ],
     "explorer.confirmDragAndDrop": false,
     "notebook.cellToolbarLocation": {
