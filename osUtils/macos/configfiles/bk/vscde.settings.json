@@ -15,10 +15,10 @@
 
     // "window.commandCenter": false,
     "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
         "*.md": "default",
         "*.csv": "default",
-        "*.pdf": "latex-workshop-pdf-hook",
-        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+        "*.pdf": "latex-workshop-pdf-hook"
     },
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt",
