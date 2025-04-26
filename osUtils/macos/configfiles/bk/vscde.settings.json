@@ -12,6 +12,10 @@
     // "workbench.colorTheme": "Visual Studio Light",
     // "workbench.colorTheme": "Visual Studio Light",
     // "window.systemColorTheme" : "light",
+    "editor.minimap.sectionHeaderFontSize": 9,
+    "editor.minimap.showMarkSectionHeaders": true,
+    "editor.minimap.scale": 3,
+
 
     // "window.commandCenter": false,
     "workbench.editorAssociations": {
