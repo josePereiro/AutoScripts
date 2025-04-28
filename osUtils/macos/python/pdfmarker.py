@@ -33,12 +33,12 @@ def main():
 
         # Skip directories, only process files
         if not inputfile.endswith(args.extension):
-            print(f"Skipping, invalid extension.")
+            print(f"Skipping, inputfile invalid extension.")
             continue
 
         # Skip directories, only process files
         if not os.path.isfile(inputfile):
-            print(f"Skipping, because file is missing.")
+            print(f"Skipping, because inputfile file is missing.")
             continue
 
         inputfile_basename = os.path.basename(inputfile).replace(args.extension, '')
@@ -46,8 +46,16 @@ def main():
         sentinel_file = os.path.join(output_dir, inputfile_basename, sentinel_name)
         print(f"sentinel_file: {sentinel_file}")
         if not args.force and os.path.exists(sentinel_file):
-            print(f"Skipping, sentinel_file already exists.")
+            print(f"Skipping, sentinel_file already exists. Use force to overwrite")
             continue
+
+
+        # reset (empty)
+        try: 
+            os.rmdir(output_dir)
+        except:
+            pass
+        os.makedirs(output_dir, exist_ok=True)
 
         # execute
         print(f"Processing...")
