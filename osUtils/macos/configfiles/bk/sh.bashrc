@@ -7,22 +7,29 @@ if [ -z "${__ENTRY_POINT+x}" ]; then
 fi
 
 # --------------------------------------------------------------
-# Proxy settings
+# MARK: Proxy settings
 # UH
 declare -a PROXY_POOL
 PROXY_POOL[1]="http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/"
 
-# Programs Settings
 ## ------------------------------------------------------------
-# gurobi
+# MARK: gurobi
 export GRB_LICENSE_FILE=/Users/Pereiro/Documents/gurobi.lic
 
 ## ------------------------------------------------------------
-# MATLAB
+# MARK: MATLAB
 export MATLAB_HOME=/Applications/MATLAB_R2017a.app
 
 ## ------------------------------------------------------------
-# JAVA
+# MARK: Marker
+MARKER_PDF_LOCAL_REPO[1]="/Users/Pereiro/Desktop/reading"
+MARKER_PDF_REMOTES[1]="pereiro@10.6.230.13:/home/pereiro/reading"
+
+MARKER_MARKDOWN_REMOTES[1]="pereiro@10.6.230.13:/home/pereiro/marker"
+MARKER_MARKDOWN_LOCAL_REPO[1]="/Users/Pereiro/marker"
+
+## ------------------------------------------------------------
+# MARK: JAVA
 # export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_191`
 
 ## ------------------------------------------------------------
