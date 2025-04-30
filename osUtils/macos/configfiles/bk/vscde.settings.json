@@ -15,7 +15,12 @@
     "editor.minimap.sectionHeaderFontSize": 9,
     "editor.minimap.showMarkSectionHeaders": true,
     "editor.minimap.scale": 3,
-
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
 
     // "window.commandCenter": false,
     "workbench.editorAssociations": {
