@@ -50,7 +50,17 @@
     },
     "zenMode.hideLineNumbers": false,
 
+    
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    "json.schemas": [
+        {
+            "fileMatch": ["**/Oba.jsonc"],
+            "url": "file:/Users/Pereiro/Documents/js/oba-plugin/schemas/Oba-jsonc-schema.jsonc",
+        }
+    ],
+
+
+    
     // MARK: proxy
     // "http.proxy": "http://10.6.100.72:3128",
     // "http.proxy": "http://apereiro%40fbio.uh.cu:92110927807@proxy-trab.uh.cu:3128/",
