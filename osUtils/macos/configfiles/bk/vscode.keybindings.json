@@ -1,6 +1,16 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "alt+cmd+f",
+        "command": "search.action.refreshSearchResults",
+        "when": "hasSearchResult || inSearchEditor"
+    },      
+    {
+        "key": "alt+cmd+/",
+        "command": "search.action.remove",
+        "when": "hasSearchResult || inSearchEditor"
+    },      
+    {
         "key": "cmd+l",
         "command": "workbench.action.terminal.clear",
     },
@@ -277,5 +287,15 @@
         "key": "shift+cmd+y",
         "command": "-workbench.debug.action.toggleRepl",
         "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "alt+cmd+/",
+        "command": "-workbench.command.prompts.use",
+        "when": "chatIsEnabled && config.chat.promptFiles"
+    },
+    {
+        "key": "shift+cmd+backspace",
+        "command": "-search.searchEditor.action.deleteFileResults",
+        "when": "inSearchEditor"
     }
 ]
