@@ -115,6 +115,10 @@
     ],
 
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: ts/js
+    "typescript.tsserver.log": "terse",
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
     // MARK: Other plugins
     // List of tags. *Note, if one tag starts with another tag, the longer 
     // tag should be specified first to prevent the shorter tag being matched.*

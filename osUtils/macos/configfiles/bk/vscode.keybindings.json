@@ -297,5 +297,9 @@
         "key": "shift+cmd+backspace",
         "command": "-search.searchEditor.action.deleteFileResults",
         "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+0",
+        "command": "typescript.restartTsServer"
     }
 ]
