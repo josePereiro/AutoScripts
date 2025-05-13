@@ -149,6 +149,7 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "jupyter.askForKernelRestart": false,
+    "vsicons.dontShowNewVersionMessage": true,
 }
 
 
