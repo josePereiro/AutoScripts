@@ -37,10 +37,10 @@ source ${__SOURCING_ROOT__}/configfiles/configfiles.sh
 ## ------------------------------------------------------------
 # source config files
 
-time source "${HOME}/.bashrc"
-time source "${HOME}/.bash_profile"
-time source "${HOME}/.zshrc"
-time source "${HOME}/.profile"
+source "${HOME}/.bashrc"
+source "${HOME}/.bash_profile"
+source "${HOME}/.zshrc"
+source "${HOME}/.profile"
 
 # ## ------------------------------------------------------------
 # onfinish hook
