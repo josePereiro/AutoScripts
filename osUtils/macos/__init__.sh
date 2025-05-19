@@ -27,7 +27,7 @@ source ${__SOURCING_ROOT__}/julia/julia.sh
 source ${__SOURCING_ROOT__}/python/python.sh
 source ${__SOURCING_ROOT__}/tex/tex.sh
 source ${__SOURCING_ROOT__}/bash/bash.sh
-source ${__SOURCING_ROOT__}/git/git.sh
+# source ${__SOURCING_ROOT__}/git/git.sh
 source ${__SOURCING_ROOT__}/ino/ino.sh
 source ${__SOURCING_ROOT__}/sys/sys.sh
 source ${__SOURCING_ROOT__}/oba/oba.sh
