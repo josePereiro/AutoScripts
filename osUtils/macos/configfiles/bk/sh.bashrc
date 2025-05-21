@@ -60,6 +60,10 @@ export GLOBAL_BIB_LIBRARY="${HOME}/Documents/My Library.bib"
 source "$ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # --------------------------------------------------------------
+# deno
+export PATH="${PATH}:/Users/Pereiro/.deno/bin/deno"
+
+# --------------------------------------------------------------
 # Julia
 export JULIA_NUM_THREADS=4
 export JULIA_EDITOR="code"
