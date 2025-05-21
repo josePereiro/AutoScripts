@@ -61,7 +61,7 @@ source "$ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # --------------------------------------------------------------
 # deno
-export PATH="${PATH}:/Users/Pereiro/.deno/bin/deno"
+export PATH="${PATH}:/Users/Pereiro/.deno/bin"
 
 # --------------------------------------------------------------
 # Julia
