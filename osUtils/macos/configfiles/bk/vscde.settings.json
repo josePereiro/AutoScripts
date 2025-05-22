@@ -23,6 +23,7 @@
     },
     "editor.minimap.markSectionHeaderRegex": "\\b(?:MARK|CUSTOM):\\s*(?<separator>-?)\\s*(?<label>.*)$",
 
+
     // "window.commandCenter": false,
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
@@ -53,6 +54,11 @@
 
     
     // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: Deno
+    // "deno.enable": true,
+
+    // ----. -.- .-... -- -... - -. -- .- .- .-.-.--.-.
+    // MARK: json.schemas
     "json.schemas": [
         {
             "fileMatch": ["**/Oba.jsonc"],
