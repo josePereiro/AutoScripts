@@ -20,7 +20,7 @@ marker_sync_markdown_remote () {
     local REMOTE=${MARKER_MARKDOWN_REMOTES[$1]}
     local LOCAL=${MARKER_MARKDOWN_LOCAL_REPO[$1]}
     echo "PULLING"
-    rsync -av --ignore-existing --exclude '.git' "${REMOTE}/" "${LOCAL}"
+    rsync -av --ignore-existing --exclude '.jpeg' "${REMOTE}/" "${LOCAL}"
     echo "PUSHING"
-    rsync -av --ignore-existing "${LOCAL}/" "${REMOTE}"
+    rsync -av --ignore-existing --exclude '.jpeg' "${LOCAL}/" "${REMOTE}"
 }
