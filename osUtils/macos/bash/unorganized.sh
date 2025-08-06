@@ -24,10 +24,13 @@ function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$
 
 
 mp3_from_m4a_all() {
-  shopt -s nullglob
 
   for infile in *.m4a; do
+    # Skip if no .m4a files matched
+    [ -e "$infile" ] || continue
+
     outfile="${infile%.m4a}.mp3"
+
     if [[ -f "$outfile" ]]; then
       echo "Skipping $infile (already converted)"
     else
