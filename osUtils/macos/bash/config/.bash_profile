@@ -1,1 +1,0 @@
-/Users/Pereiro/.bash_profile
