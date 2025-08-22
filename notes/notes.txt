@@ -1,0 +1,4 @@
+# TODO/TAI
+# - Right now Im doing one version per OS
+# - Think about the best way of doing so and having some sharing of code/libraries
+

@@ -1,0 +1,4 @@
+export AUTOSCRIPTS_JULIA_HOME_FOLDER="${AUTOSCRIPTS_TOOLS_HOME_FOLDER}/julia"
+export AUTOSCRIPTS_JULIA_PROJECT="${AUTOSCRIPTS_JULIA_HOME_FOLDER}/Project.toml"
+
+alias jl_dev_locals='julia --startup-file=no --project="${AUTOSCRIPTS_JULIA_PROJECT}" "${AUTOSCRIPTS_JULIA_HOME_FOLDER}/dev_locals.jl"'  
